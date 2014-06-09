@@ -12,7 +12,9 @@
 
 -(void)layoutSubviews{
     [super layoutSubviews];
-    [self startChain];
+    if(self.superview && ![self.superview isKindOfClass:NSClassFromString(@"CANChain")]){
+        [self startChain];
+    }
     
 }
 
@@ -29,14 +31,17 @@
 
 -(void)chain{
     NSLog(@"chain  %@",NSStringFromClass(self.class));
-    for (CANChain *chain  in self.subviews ) {
-        [chain startChain];
+    for (UIView *view  in self.subviews ) {
+        if([view isKindOfClass:NSClassFromString(@"CANChain")]){
+            CANChain *chain = (CANChain*)view;
+            [chain startChain];
+        }
     }
     
 }
 
 -(void)next{
-    self.status = CANChainStatusRunning;
+    self.status = CANChainStatusComplete;
     if(self.subviews.count == 0){
         [self completeChain];
     }
@@ -55,15 +60,30 @@
             return;
         }
     }
-    
-    if(self.delegate && self.completion && [self.delegate respondsToSelector:NSSelectorFromString(self.completion)]){
-        NSLog(@"completion  %@",NSStringFromClass(self.class));
-        dispatch_async(dispatch_get_main_queue(),^{
-            [self.delegate performSelector:NSSelectorFromString(self.completion)];
-        });
+   
+    if(self.status != CANChainStatusComplete ){
+        return;
     }
     
-    if(self.superview && [self.superview isKindOfClass:self.class]){
+    self.status = CANChainStatusNotRunning;
+    
+    if(self.delegate ){
+        if(self.completion && [self.delegate respondsToSelector:NSSelectorFromString(self.completion)]){
+            NSLog(@"completion  %@",NSStringFromClass(self.class));
+            dispatch_async(dispatch_get_main_queue(),^{
+                [self.delegate performSelector:NSSelectorFromString(self.completion)];
+            });
+        }
+        else if([self.delegate isKindOfClass:NSClassFromString(@"CANChain")]){
+            CANChain *chain = (CANChain*)self.delegate;
+            dispatch_async(dispatch_get_main_queue(),^{
+                [chain startChain];
+            });
+        }
+    }
+    
+    
+    if(self.superview && [self.superview isKindOfClass:NSClassFromString(@"CANChain")]){
         CANChain *chain =  (CANChain*)self.superview;
         [chain completeChain];
     }
@@ -77,6 +97,9 @@
 }
 
 -(void)startChain{
+    if(!self.target){
+        self.target = self;
+    }
     dispatch_async(dispatch_get_main_queue(),^{
         self.status = CANChainStatusRunning;
         [self performAction];

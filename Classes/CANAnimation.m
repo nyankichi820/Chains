@@ -12,8 +12,7 @@
 
 
 -(void) performAction{
-    
-   
+    [self next];
 }
 
 

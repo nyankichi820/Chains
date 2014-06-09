@@ -21,7 +21,7 @@
 }
 
 -(void)endAnimation{
-    [[[UIAlertView alloc] initWithTitle:@"hoge" message:@"hoge" delegate:nil cancelButtonTitle:@"ok" otherButtonTitles:nil] show];
+    [[[UIAlertView alloc] initWithTitle:@"chain animation" message:@"complete" delegate:nil cancelButtonTitle:@"ok" otherButtonTitles:nil] show];
     
     
 }

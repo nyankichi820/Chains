@@ -17,7 +17,6 @@ typedef enum CANChainStatus : int {
 } CANChainStatus;
 
 @interface CANChain : UIView
-
 @property (weak, nonatomic) IBOutlet UIView *target;
 @property (nonatomic) CANChainStatus status;
 @property (weak, nonatomic) IBOutlet NSObject *delegate;
