@@ -20,6 +20,11 @@
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
+-(void)endAnimation{
+    [[[UIAlertView alloc] initWithTitle:@"hoge" message:@"hoge" delegate:nil cancelButtonTitle:@"ok" otherButtonTitles:nil] show];
+    
+    
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

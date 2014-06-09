@@ -1,15 +1,13 @@
 //
-//  CANViewController.h
+//  CANAnimation.m
 //  Chains
 //
 //  Created by masafumi yoshida on 2014/06/06.
 //  Copyright (c) 2014年 masafumi yoshida. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "CANAnimation.h"
 
-@interface CANViewController : UIViewController
+@implementation CANAnimation
 
-
--(void)endAnimation;
 @end
