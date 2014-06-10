@@ -19,6 +19,14 @@
 
 @end
 
+@interface CANPinchScale : CANAnimation
+
+@end
+
+@interface CANPanMove : CANAnimation
+
+@end
+
 @interface CANMoveBy : CANAnimation
 @property (nonatomic) CGPoint position;
 @end

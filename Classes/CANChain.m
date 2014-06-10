@@ -23,6 +23,7 @@
 }
 
 -(IBAction)startChain:(id)sender{
+    self.sender = sender;
     NSLog(@"start  %@",NSStringFromClass(self.class));
     [self startChain];
     

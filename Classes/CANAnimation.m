@@ -18,6 +18,60 @@
 
 @end
 
+@interface CANPinchScale ()
+@property(nonatomic) CGAffineTransform startTransform;
+@property(nonatomic,strong) NSNumber *minScale;
+@property(nonatomic,strong) NSNumber *maxScale;
+@end
+
+@implementation CANPinchScale
+
+-(void)performAction{
+    UIPinchGestureRecognizer *gesture = (UIPinchGestureRecognizer*)self.sender;
+    if(gesture.state == UIGestureRecognizerStateBegan){
+        self.startTransform = self.target.transform;
+    }
+    else if(gesture.state == UIGestureRecognizerStateChanged){
+        CGFloat scale = [gesture scale];
+        NSLog(@"%f",scale);
+        if(self.minScale && self.minScale.floatValue > scale){
+            return;
+        }
+        if(self.maxScale && self.maxScale.floatValue < scale){
+            return;
+        }
+        self.target.transform = CGAffineTransformConcat(self.startTransform, CGAffineTransformMakeScale(gesture.scale, gesture.scale));
+    }
+    else if(gesture.state == UIGestureRecognizerStatePossible){
+        [self next];
+    }
+}
+
+@end
+
+@interface CANPanMove ()
+@property(nonatomic) CGPoint startPoint;
+
+@end
+
+@implementation CANPanMove
+
+-(void)performAction{
+    UIPanGestureRecognizer *gesture = (UIPanGestureRecognizer*)self.sender;
+    CGPoint p = [gesture translationInView:self.target.superview];
+    if(gesture.state == UIGestureRecognizerStateBegan){
+        self.startPoint = self.target.center;
+    }
+    else if(gesture.state == UIGestureRecognizerStateChanged){
+        self.target.center = CGPointMake(self.startPoint.x + p.x, self.startPoint.y + p.y);
+    }
+    else if(gesture.state == UIGestureRecognizerStatePossible){
+        [self next];
+    }
+}
+
+@end
+
 @implementation CANMoveBy
 
 -(void)performAction{
