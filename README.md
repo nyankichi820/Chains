@@ -22,3 +22,5 @@ Chains is edit actions on InterfaceBuilder  library
 - please set delegate and completion property  if want to execute  end process 
 
 execute animation when did view appear 
+
+see also [Qiita](http://qiita.com/appwatcher/items/79f224532872dbec60d8)
