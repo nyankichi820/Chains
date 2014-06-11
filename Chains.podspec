@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "Chains"
-  s.version      = "0.0.1"
+  s.version      = "0.1.0"
   s.summary      = "chain action implement on InterfaceBuilder. example animation create easy."
 
   s.description  = <<-DESC
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 
   s.platform     = :ios, '6.0'
 
-  s.source       = { :git => "https://github.com/nyankichi820/Chains.git", :tag => "0.0.1" }
+  s.source       = { :git => "https://github.com/nyankichi820/Chains.git", :tag => "0.1.0" }
 
   s.source_files  = 'Classes', 'Classes/**/*.{h,m}'
 
