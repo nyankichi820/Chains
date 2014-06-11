@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		7F3484A0194541EE00AA004E /* CANChain.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F34849F194541EE00AA004E /* CANChain.m */; };
-		7F3484A319467CB900AA004E /* CANRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F3484A219467CB900AA004E /* CANRequest.m */; };
 		7F64B3E71941D7DF00CF2BA3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F64B3E61941D7DF00CF2BA3 /* Foundation.framework */; };
 		7F64B3E91941D7DF00CF2BA3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F64B3E81941D7DF00CF2BA3 /* CoreGraphics.framework */; };
 		7F64B3EB1941D7DF00CF2BA3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F64B3EA1941D7DF00CF2BA3 /* UIKit.framework */; };
@@ -39,8 +38,6 @@
 /* Begin PBXFileReference section */
 		7F34849E194541EE00AA004E /* CANChain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CANChain.h; sourceTree = "<group>"; };
 		7F34849F194541EE00AA004E /* CANChain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CANChain.m; sourceTree = "<group>"; };
-		7F3484A119467CB900AA004E /* CANRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CANRequest.h; sourceTree = "<group>"; };
-		7F3484A219467CB900AA004E /* CANRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CANRequest.m; sourceTree = "<group>"; };
 		7F64B3E31941D7DF00CF2BA3 /* Chains.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chains.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F64B3E61941D7DF00CF2BA3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		7F64B3E81941D7DF00CF2BA3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -169,8 +166,6 @@
 				7F34849F194541EE00AA004E /* CANChain.m */,
 				7F64B41C1941D80500CF2BA3 /* CANAnimation.h */,
 				7F64B41D1941D80500CF2BA3 /* CANAnimation.m */,
-				7F3484A119467CB900AA004E /* CANRequest.h */,
-				7F3484A219467CB900AA004E /* CANRequest.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -277,7 +272,6 @@
 				7F64B3FD1941D7DF00CF2BA3 /* CANViewController.m in Sources */,
 				7F64B3F71941D7DF00CF2BA3 /* CANAppDelegate.m in Sources */,
 				7F64B41E1941D80500CF2BA3 /* CANAnimation.m in Sources */,
-				7F3484A319467CB900AA004E /* CANRequest.m in Sources */,
 				7F3484A0194541EE00AA004E /* CANChain.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

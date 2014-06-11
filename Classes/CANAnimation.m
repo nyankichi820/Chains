@@ -18,6 +18,77 @@
 
 @end
 
+
+
+@implementation CANGestureAnimation
+
+-(IBAction)startChain:(UIGestureRecognizer*)sender{
+    self.sender = sender;
+    if(!self.target){
+        self.target = sender.view;
+    }
+    NSLog(@"start  %@",NSStringFromClass(self.class));
+    [self startChain];
+    
+    
+}
+
+@end
+
+@implementation CANScaleTo
+-(void)performAction{
+    // Start
+    [UIView animateKeyframesWithDuration:self.duration delay:self.delay options:0 animations:^{
+        // End
+        self.target.transform = CGAffineTransformMakeScale(self.scale, self.scale);
+    } completion:^(BOOL finished) {
+        [self next];
+    }];
+}
+@end
+
+
+@implementation CANScaleBy
+-(void)performAction{
+    // Start
+    CGAffineTransform transform = self.target.transform;
+    self.target.transform =  CGAffineTransformMakeScale(self.scale, self.scale);
+    [UIView animateKeyframesWithDuration:self.duration delay:self.delay options:0 animations:^{
+        // End
+        self.target.transform = transform;
+    } completion:^(BOOL finished) {
+        [self next];
+    }];
+}
+@end
+
+@implementation CANRotateTo
+-(void)performAction{
+    // Start
+    [UIView animateKeyframesWithDuration:self.duration delay:self.delay options:0 animations:^{
+        // End
+        self.target.transform = CGAffineTransformMakeRotation(self.angle);
+    } completion:^(BOOL finished) {
+        [self next];
+    }];
+}
+@end
+
+
+@implementation CANRotateBy
+-(void)performAction{
+    // Start
+    CGAffineTransform transform = self.target.transform;
+    self.target.transform = CGAffineTransformMakeRotation(self.angle);
+    [UIView animateKeyframesWithDuration:self.duration delay:self.delay options:0 animations:^{
+        // End
+        self.target.transform = transform;
+    } completion:^(BOOL finished) {
+        [self next];
+    }];
+}
+@end
+
 @interface CANPinchScale ()
 @property(nonatomic) CGAffineTransform startTransform;
 @property(nonatomic,strong) NSNumber *minScale;
@@ -98,6 +169,93 @@
     }];
 }
 
+@end
+
+@implementation CANFadeBy
+
+-(void)performAction{
+    float alpha = self.target.alpha;
+    self.target.alpha = self.alpha;
+    [UIView animateKeyframesWithDuration:self.duration delay:self.delay options:0 animations:^{
+        // End
+        self.target.alpha = alpha;
+    } completion:^(BOOL finished) {
+        [self next];
+    }];
+}
+
+@end
+
+@implementation CANFadeTo
+
+-(void)performAction{
+    [UIView animateKeyframesWithDuration:self.duration delay:self.delay options:0 animations:^{
+        // End
+        self.target.alpha = self.alpha;
+    } completion:^(BOOL finished) {
+        [self next];
+    }];
+}
+
+@end
+
+
+
+
+@implementation CANFadeIn
+-(void)performAction{
+    // Start
+    self.target.alpha = 0;
+    [UIView animateKeyframesWithDuration:self.duration delay:self.delay options:0 animations:^{
+        // End
+        self.target.alpha = 1;
+    } completion:^(BOOL finished) {
+        [self next];
+    }];
+}
+@end
+
+@implementation CANFadeOut
+-(void)performAction{
+    // Start
+    self.target.alpha = 1;
+    [UIView animateKeyframesWithDuration:self.duration delay:self.delay options:0 animations:^{
+        // End
+        self.target.alpha = 0;
+    } completion:^(BOOL finished) {
+        [self next];
+    }];
+}
+@end
+
+@implementation CANFadeInDown
+-(void)performAction{
+    // Start
+    self.target.alpha = 0;
+    self.target.transform = CGAffineTransformMakeTranslation(0, -300);
+    [UIView animateKeyframesWithDuration:self.duration delay:self.delay options:0 animations:^{
+        // End
+        self.target.alpha = 1;
+        self.target.transform = CGAffineTransformMakeTranslation(0, 0);
+    } completion:^(BOOL finished) {
+        [self next];
+    }];
+}
+@end
+
+@implementation CANFadeInUp
+-(void)performAction{
+    // Start
+    self.target.alpha = 0;
+    self.target.transform = CGAffineTransformMakeTranslation(0, 300);
+    [UIView animateKeyframesWithDuration:self.duration delay:self.delay options:0 animations:^{
+        // End
+        self.target.alpha = 1;
+        self.target.transform = CGAffineTransformMakeTranslation(0, 0);
+    } completion:^(BOOL finished) {
+        [self next];
+    }];
+}
 @end
 
 @implementation CANBounceLeft
@@ -272,32 +430,6 @@
 @end
 
 
-@implementation CANFadeIn
--(void)performAction{
-    // Start
-    self.target.alpha = 0;
-    [UIView animateKeyframesWithDuration:self.duration delay:self.delay options:0 animations:^{
-        // End
-        self.target.alpha = 1;
-    } completion:^(BOOL finished) {
-     [self next];
-    }];
-}
-@end
-
-@implementation CANFadeOut
--(void)performAction{
-    // Start
-    self.target.alpha = 1;
-    [UIView animateKeyframesWithDuration:self.duration delay:self.delay options:0 animations:^{
-        // End
-        self.target.alpha = 0;
-    } completion:^(BOOL finished) {
-     [self next];
-    }];
-}
-@end
-
 @implementation CANFadeInLeft
 -(void)performAction{
     // Start
@@ -328,35 +460,7 @@
 }
 @end
 
-@implementation CANFadeInDown
--(void)performAction{
-    // Start
-    self.target.alpha = 0;
-    self.target.transform = CGAffineTransformMakeTranslation(0, -300);
-    [UIView animateKeyframesWithDuration:self.duration delay:self.delay options:0 animations:^{
-        // End
-        self.target.alpha = 1;
-        self.target.transform = CGAffineTransformMakeTranslation(0, 0);
-    } completion:^(BOOL finished) {
-     [self next];
-    }];
-}
-@end
 
-@implementation CANFadeInUp
--(void)performAction{
-    // Start
-    self.target.alpha = 0;
-    self.target.transform = CGAffineTransformMakeTranslation(0, 300);
-    [UIView animateKeyframesWithDuration:self.duration delay:self.delay options:0 animations:^{
-        // End
-        self.target.alpha = 1;
-        self.target.transform = CGAffineTransformMakeTranslation(0, 0);
-    } completion:^(BOOL finished) {
-     [self next];
-    }];
-}
-@end
 
 @implementation CANPop
 -(void)performAction{

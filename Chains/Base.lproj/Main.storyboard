@@ -13,32 +13,116 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" id="Mf3-iq-c5z">
-                                <rect key="frame" x="137" y="177" width="50" height="50"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <rect key="frame" x="135" y="177" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <view contentMode="scaleToFill" id="7uu-sr-LNh" customClass="CANMoveBy">
                                 <rect key="frame" x="143" y="344" width="34" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" id="RQC-ql-8fQ" customClass="CANMoveTo">
+                                    <view contentMode="scaleToFill" id="jKX-lI-YaK" customClass="CANRotateTo">
                                         <rect key="frame" x="0.0" y="0.0" width="34" height="34"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" id="vT3-AK-3hx" customClass="CANMorph">
+                                            <view contentMode="scaleToFill" id="ISj-DM-iJl" customClass="CANRotateTo">
                                                 <rect key="frame" x="0.0" y="0.0" width="34" height="34"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" id="hJ7-mY-39S" customClass="CANRotateTo">
+                                                        <rect key="frame" x="0.0" y="0.0" width="34" height="34"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <subviews>
+                                                            <view contentMode="scaleToFill" id="gc0-fV-HSS" customClass="CANScaleTo">
+                                                                <rect key="frame" x="0.0" y="0.0" width="34" height="34"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <subviews>
+                                                                    <view contentMode="scaleToFill" id="RQC-ql-8fQ" customClass="CANFlash">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="34" height="34"/>
+                                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                        <subviews>
+                                                                            <view contentMode="scaleToFill" id="vT3-AK-3hx" customClass="CANMorph">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="34" height="34"/>
+                                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                                                                <userDefinedRuntimeAttributes>
+                                                                                    <userDefinedRuntimeAttribute type="number" keyPath="duration">
+                                                                                        <integer key="value" value="1"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                    <userDefinedRuntimeAttribute type="number" keyPath="delay">
+                                                                                        <real key="value" value="0.5"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                </userDefinedRuntimeAttributes>
+                                                                                <connections>
+                                                                                    <outlet property="target" destination="Mf3-iq-c5z" id="VAd-r1-OwL"/>
+                                                                                </connections>
+                                                                            </view>
+                                                                        </subviews>
+                                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="duration">
+                                                                                <integer key="value" value="1"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="delay">
+                                                                                <real key="value" value="0.5"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="point" keyPath="position">
+                                                                                <point key="value" x="-300" y="800"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                        <connections>
+                                                                            <outlet property="target" destination="Mf3-iq-c5z" id="aXB-oc-gxI"/>
+                                                                        </connections>
+                                                                    </view>
+                                                                </subviews>
+                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="duration">
+                                                                        <integer key="value" value="1"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="delay">
+                                                                        <integer key="value" value="0"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="scale">
+                                                                        <integer key="value" value="2"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <outlet property="target" destination="Mf3-iq-c5z" id="gBa-Ml-J1S"/>
+                                                                </connections>
+                                                            </view>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="duration">
+                                                                <integer key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="delay">
+                                                                <integer key="value" value="0"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="angle">
+                                                                <integer key="value" value="0"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <outlet property="target" destination="Mf3-iq-c5z" id="snT-P6-Dna"/>
+                                                        </connections>
+                                                    </view>
+                                                </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="duration">
                                                         <integer key="value" value="1"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="delay">
-                                                        <real key="value" value="0.5"/>
+                                                        <integer key="value" value="0"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="angle">
+                                                        <integer key="value" value="-50"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <outlet property="target" destination="Mf3-iq-c5z" id="VAd-r1-OwL"/>
+                                                    <outlet property="target" destination="Mf3-iq-c5z" id="vZ3-SC-5Z0"/>
                                                 </connections>
                                             </view>
                                         </subviews>
@@ -48,14 +132,14 @@
                                                 <integer key="value" value="1"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="delay">
-                                                <real key="value" value="0.5"/>
+                                                <integer key="value" value="0"/>
                                             </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="point" keyPath="position">
-                                                <point key="value" x="-300" y="800"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="angle">
+                                                <integer key="value" value="50"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <outlet property="target" destination="Mf3-iq-c5z" id="aXB-oc-gxI"/>
+                                            <outlet property="target" destination="Mf3-iq-c5z" id="7dz-eE-0nJ"/>
                                         </connections>
                                     </view>
                                 </subviews>
@@ -231,19 +315,22 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" id="YxD-IJ-n5Z">
-                                <rect key="frame" x="188" y="169" width="50" height="50"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <rect key="frame" x="230" y="109" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="cWG-hT-atv">
-                                <rect key="frame" x="101" y="286" width="122" height="30"/>
+                                <rect key="frame" x="99" y="186" width="122" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button">
+                                <state key="normal" title="Start Animation">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="startChain:" destination="eV3-Cc-GI4" eventType="touchUpInside" id="QLO-r0-zbP"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" id="3ng-cp-bdm">
-                                <rect key="frame" x="82" y="169" width="51" height="50"/>
+                                <rect key="frame" x="32" y="109" width="51" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
@@ -257,83 +344,93 @@
                     <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
-                        <view contentMode="scaleToFill" id="trL-nI-HAt" customClass="CANFadeIn">
+                        <view contentMode="scaleToFill" id="O2I-Dp-8OA" customClass="CANAnimation">
                             <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <view contentMode="scaleToFill" id="la0-ss-6AU" customClass="CANBounceRight">
+                                <view contentMode="scaleToFill" id="trL-nI-HAt" customClass="CANFadeIn">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="number" keyPath="duration">
-                                            <real key="value" value="0.40000000000000002"/>
+                                            <integer key="value" value="3"/>
                                         </userDefinedRuntimeAttribute>
                                         <userDefinedRuntimeAttribute type="number" keyPath="delay">
-                                            <integer key="value" value="1"/>
+                                            <real key="value" value="0.5"/>
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
                                     <connections>
-                                        <outlet property="target" destination="YxD-IJ-n5Z" id="iiW-8d-Shd"/>
+                                        <outlet property="target" destination="3ng-cp-bdm" id="tzM-wm-a8r"/>
+                                    </connections>
+                                </view>
+                                <view contentMode="scaleToFill" id="la0-ss-6AU" customClass="CANSlideRight">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="duration">
+                                            <integer key="value" value="2"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="delay">
+                                            <real key="value" value="0.5"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <outlet property="target" destination="3ng-cp-bdm" id="JRq-mf-V1j"/>
                                     </connections>
                                 </view>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                            <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="number" keyPath="duration">
-                                    <real key="value" value="0.40000000000000002"/>
-                                </userDefinedRuntimeAttribute>
-                                <userDefinedRuntimeAttribute type="number" keyPath="delay">
-                                    <integer key="value" value="1"/>
-                                </userDefinedRuntimeAttribute>
-                            </userDefinedRuntimeAttributes>
                             <connections>
-                                <outlet property="target" destination="YxD-IJ-n5Z" id="fHc-xk-6au"/>
+                                <outlet property="target" destination="YxD-IJ-n5Z" id="Fr3-nb-sgB"/>
                             </connections>
                         </view>
-                        <view contentMode="scaleToFill" id="olJ-HM-aE8" customClass="CANFadeIn">
+                        <view contentMode="scaleToFill" id="7Im-HG-Boj" customClass="CANAnimation">
                             <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <view contentMode="scaleToFill" id="5Bg-T3-Enr" customClass="CANBounceLeft">
+                                <view contentMode="scaleToFill" id="olJ-HM-aE8" customClass="CANFadeIn">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="duration">
+                                            <integer key="value" value="3"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="delay">
+                                            <real key="value" value="0.5"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <outlet property="target" destination="YxD-IJ-n5Z" id="EtU-Yt-6oV"/>
+                                    </connections>
+                                </view>
+                                <view contentMode="scaleToFill" id="5Bg-T3-Enr" customClass="CANSlideLeft">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="number" keyPath="duration">
-                                            <real key="value" value="0.40000000000000002"/>
+                                            <integer key="value" value="2"/>
                                         </userDefinedRuntimeAttribute>
                                         <userDefinedRuntimeAttribute type="number" keyPath="delay">
-                                            <integer key="value" value="1"/>
+                                            <real key="value" value="0.5"/>
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
                                     <connections>
-                                        <outlet property="target" destination="3ng-cp-bdm" id="1UM-0y-pEh"/>
+                                        <outlet property="target" destination="YxD-IJ-n5Z" id="SpJ-20-jlF"/>
                                     </connections>
                                 </view>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                            <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="number" keyPath="duration">
-                                    <real key="value" value="0.40000000000000002"/>
-                                </userDefinedRuntimeAttribute>
-                                <userDefinedRuntimeAttribute type="number" keyPath="delay">
-                                    <integer key="value" value="1"/>
-                                </userDefinedRuntimeAttribute>
-                            </userDefinedRuntimeAttributes>
                             <connections>
-                                <outlet property="target" destination="3ng-cp-bdm" id="MSz-o5-Iq9"/>
+                                <outlet property="target" destination="YxD-IJ-n5Z" id="XTI-Vm-3PQ"/>
                             </connections>
                         </view>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="number" keyPath="duration">
-                            <integer key="value" value="1"/>
-                        </userDefinedRuntimeAttribute>
-                        <userDefinedRuntimeAttribute type="number" keyPath="delay">
-                            <integer key="value" value="1"/>
-                        </userDefinedRuntimeAttribute>
                         <userDefinedRuntimeAttribute type="string" keyPath="completion" value="endAnimation"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
@@ -595,8 +692,8 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" id="rj1-vx-Qld">
-                                <rect key="frame" x="127" y="111" width="50" height="50"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <rect key="frame" x="57" y="97" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <gestureRecognizers/>
                                 <connections>
@@ -604,20 +701,266 @@
                                 </connections>
                             </view>
                             <view multipleTouchEnabled="YES" contentMode="scaleToFill" id="smH-hb-oKR">
-                                <rect key="frame" x="57" y="205" width="205" height="203"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <rect key="frame" x="108" y="197" width="106" height="106"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
                                 <gestureRecognizers/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="SnU-kc-xbg" appends="YES" id="sjJ-kh-WAx"/>
                                 </connections>
                             </view>
+                            <view contentMode="scaleToFill" id="HPz-0R-WdB">
+                                <rect key="frame" x="58" y="369" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="xwv-n9-rhn" appends="YES" id="7zu-NP-zh5"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" id="j8D-ih-mwh">
+                                <rect key="frame" x="136" y="369" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="SQR-3b-8L6" appends="YES" id="uvj-sP-FEq"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" id="0gh-TI-A6V">
+                                <rect key="frame" x="213" y="369" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="WEC-Cc-SCh" appends="YES" id="TUc-dP-ZnO"/>
+                                </connections>
+                            </view>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pan" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="qOu-Ge-Ea7">
+                                <rect key="frame" x="57" y="68" width="30" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pinch" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="BjZ-Ny-OYe">
+                                <rect key="frame" x="57" y="154" width="44" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="yH0-sB-v5p">
+                                <rect key="frame" x="58" y="340" width="28" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="6eH-Wu-7lc"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kan-Yh-fjv" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="lUz-Oz-Ff4" customClass="CANAnimation">
+                    <rect key="frame" x="0.0" y="0.0" width="34" height="34"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" id="U1c-zB-9cs" customClass="CANScaleTo">
+                            <rect key="frame" x="0.0" y="0.0" width="34" height="34"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="duration">
+                                    <integer key="value" value="1"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="delay">
+                                    <integer key="value" value="0"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="scale">
+                                    <integer key="value" value="2"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <outlet property="target" destination="HPz-0R-WdB" id="fyq-XW-jiM"/>
+                            </connections>
+                        </view>
+                        <view contentMode="scaleToFill" id="tIe-A2-Mic" customClass="CANScaleTo">
+                            <rect key="frame" x="0.0" y="0.0" width="34" height="34"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="duration">
+                                    <integer key="value" value="1"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="delay">
+                                    <integer key="value" value="0"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="scale">
+                                    <integer key="value" value="1"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <outlet property="target" destination="j8D-ih-mwh" id="cik-oo-ntk"/>
+                            </connections>
+                        </view>
+                        <view contentMode="scaleToFill" id="TX8-Eg-f1u" customClass="CANScaleTo">
+                            <rect key="frame" x="0.0" y="0.0" width="34" height="34"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="duration">
+                                    <integer key="value" value="1"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="delay">
+                                    <integer key="value" value="0"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="scale">
+                                    <integer key="value" value="1"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <outlet property="target" destination="0gh-TI-A6V" id="qcp-03-pm6"/>
+                            </connections>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="delegate" destination="tUp-fO-FIX" id="HP5-mZ-5eY"/>
+                    </connections>
+                </view>
+                <view contentMode="scaleToFill" id="PhZ-0f-xOB" customClass="CANAnimation">
+                    <rect key="frame" x="0.0" y="0.0" width="34" height="34"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" id="AwK-yL-ism" customClass="CANScaleTo">
+                            <rect key="frame" x="0.0" y="0.0" width="34" height="34"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="duration">
+                                    <integer key="value" value="1"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="delay">
+                                    <integer key="value" value="0"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="scale">
+                                    <integer key="value" value="1"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <outlet property="target" destination="HPz-0R-WdB" id="pXw-1F-6ob"/>
+                            </connections>
+                        </view>
+                        <view contentMode="scaleToFill" id="6AN-AK-lSo" customClass="CANScaleTo">
+                            <rect key="frame" x="0.0" y="0.0" width="34" height="34"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="duration">
+                                    <integer key="value" value="1"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="delay">
+                                    <integer key="value" value="0"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="scale">
+                                    <integer key="value" value="2"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <outlet property="target" destination="j8D-ih-mwh" id="M0N-kr-eN9"/>
+                            </connections>
+                        </view>
+                        <view contentMode="scaleToFill" id="vEB-VC-uf9" customClass="CANScaleTo">
+                            <rect key="frame" x="0.0" y="0.0" width="34" height="34"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="duration">
+                                    <integer key="value" value="1"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="delay">
+                                    <integer key="value" value="0"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="scale">
+                                    <integer key="value" value="1"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <outlet property="target" destination="0gh-TI-A6V" id="pM6-Ib-FVq"/>
+                            </connections>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="delegate" destination="tUp-fO-FIX" id="d0D-Xg-5rJ"/>
+                    </connections>
+                </view>
+                <view contentMode="scaleToFill" id="jUL-VN-QVi" customClass="CANAnimation">
+                    <rect key="frame" x="0.0" y="0.0" width="34" height="34"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" id="oSa-Vo-56F" customClass="CANScaleTo">
+                            <rect key="frame" x="0.0" y="0.0" width="34" height="34"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="duration">
+                                    <integer key="value" value="1"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="delay">
+                                    <integer key="value" value="0"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="scale">
+                                    <integer key="value" value="1"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <outlet property="target" destination="HPz-0R-WdB" id="jeO-Gn-j6b"/>
+                            </connections>
+                        </view>
+                        <view contentMode="scaleToFill" id="My3-ha-kF5" customClass="CANScaleTo">
+                            <rect key="frame" x="0.0" y="0.0" width="34" height="34"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="duration">
+                                    <integer key="value" value="1"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="delay">
+                                    <integer key="value" value="0"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="scale">
+                                    <integer key="value" value="1"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <outlet property="target" destination="j8D-ih-mwh" id="Qyd-7d-rNh"/>
+                            </connections>
+                        </view>
+                        <view contentMode="scaleToFill" id="iRM-dx-gSt" customClass="CANScaleTo">
+                            <rect key="frame" x="0.0" y="0.0" width="34" height="34"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="duration">
+                                    <integer key="value" value="1"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="delay">
+                                    <integer key="value" value="0"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="scale">
+                                    <integer key="value" value="2"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <outlet property="target" destination="0gh-TI-A6V" id="jWe-c1-ZE8"/>
+                            </connections>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                </view>
                 <view contentMode="scaleToFill" id="vfx-yW-exL" customClass="CANPanMove">
                     <rect key="frame" x="0.0" y="0.0" width="34" height="34"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -627,7 +970,6 @@
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="delegate" destination="eCH-g2-BMb" id="o3O-2r-6pA"/>
-                        <outlet property="target" destination="rj1-vx-Qld" id="hjB-ux-AX4"/>
                     </connections>
                 </view>
                 <view contentMode="scaleToFill" id="BUw-uE-To7" customClass="CANPinchScale">
@@ -639,7 +981,6 @@
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="delegate" destination="PRE-c5-TqW" id="MYy-xE-gRA"/>
-                        <outlet property="target" destination="smH-hb-oKR" id="GW1-U4-dv4"/>
                     </connections>
                 </view>
                 <view contentMode="scaleToFill" id="eCH-g2-BMb" customClass="CANFlash">
@@ -686,6 +1027,21 @@
                         <action selector="startChain:" destination="BUw-uE-To7" id="8ml-A5-vjB"/>
                     </connections>
                 </pinchGestureRecognizer>
+                <tapGestureRecognizer id="SQR-3b-8L6">
+                    <connections>
+                        <action selector="startChain:" destination="PhZ-0f-xOB" id="yFr-Ut-Sh1"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="xwv-n9-rhn">
+                    <connections>
+                        <action selector="startChain:" destination="lUz-Oz-Ff4" id="49X-JD-Afb"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="WEC-Cc-SCh">
+                    <connections>
+                        <action selector="startChain:" destination="jUL-VN-QVi" id="qNe-A9-9Rh"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1322" y="229"/>
         </scene>

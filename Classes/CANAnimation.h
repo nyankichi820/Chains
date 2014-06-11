@@ -19,11 +19,36 @@
 
 @end
 
-@interface CANPinchScale : CANAnimation
+@interface CANGestureAnimation : CANAnimation
 
 @end
 
-@interface CANPanMove : CANAnimation
+@interface CANPinchScale : CANGestureAnimation
+
+@end
+
+@interface CANPanMove : CANGestureAnimation
+
+@end
+
+
+@interface CANScaleTo : CANAnimation
+@property (nonatomic) float scale;
+
+@end
+
+@interface CANScaleBy : CANAnimation
+@property (nonatomic) float scale;
+
+@end
+
+@interface CANRotateTo : CANAnimation
+@property (nonatomic) float angle;
+
+@end
+
+@interface CANRotateBy : CANAnimation
+@property (nonatomic) float angle;
 
 @end
 
@@ -33,6 +58,14 @@
 
 @interface CANMoveTo : CANAnimation
 @property (nonatomic) CGPoint position;
+@end
+
+@interface CANFadeBy : CANAnimation
+@property (nonatomic) float alpha;
+@end
+
+@interface CANFadeTo : CANAnimation
+@property (nonatomic) float alpha;
 @end
 
 @interface CANBounceLeft : CANAnimation
